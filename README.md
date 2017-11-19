@@ -1,5 +1,7 @@
 # Docker образ с клиентом Git
 
+[ ![Download](https://api.bintray.com/packages/javister/docker/javister%3Ajavister-docker-git/images/download.svg) ](https://bintray.com/javister/docker/javister%3Ajavister-docker-git/_latestVersion)
+
 ## Введение
 
 Данный образ предназначен в первую очередь для multistage сборок Docker образов,
