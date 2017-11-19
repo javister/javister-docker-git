@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e
+
+# TODO: Требуется дополнительная проработка работы с proxy
+# https://gist.github.com/evantoli/f8c23a37eb3558ab8765
+
+if [ "${SET_GIT_PROXY}" == "yes" ] && [ ! -z "${http_proxy}" ]; then
+    git config --global  "${http_proxy}"
+fi
+
+if [ "$1" == "bash" ]; then
+    shift 1
+    setuser system bash $@
+elif [ "$1" == "root" ]; then
+    shift 1
+    bash $@
+else
+    setuser system git $@
+fi
