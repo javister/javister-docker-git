@@ -6,8 +6,8 @@ set -e
 # https://gist.github.com/evantoli/f8c23a37eb3558ab8765
 
 if [ "${SET_GIT_PROXY}" == "yes" ] && [ ! -z "${http_proxy}" ]; then
-    git config --global http.proxy ${http_proxy}
-    git config --global https.proxy ${http_proxy}
+    setuser system git config --global http.proxy ${http_proxy}
+    setuser system git config --global https.proxy ${http_proxy}
 fi
 
 if [ "$1" == "bash" ]; then

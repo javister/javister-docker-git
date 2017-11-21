@@ -12,6 +12,7 @@ ENV HOME="/app" \
 
 RUN . /usr/local/bin/yum-proxy && \
     yum-install && \
+    chmod 0777 /config && \
     yum-clean && \
     chmod --recursive --changes +x /etc/my_init.d/*.sh /etc/service /usr/local/bin
 
