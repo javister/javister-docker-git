@@ -21,7 +21,7 @@ Git в систему.
 docker run \
     -ti \
     --rm \
-    -v "$(pwd)/..":"$(pwd)/.." \
+    -v "$(pwd)":"$(pwd)" \
     -e PUID=$(id -u) \
     -e PGID=$(id -g) \
     --workdir="$(pwd)" \
@@ -36,9 +36,10 @@ git_func() {
     docker run \
         -ti \
         --rm \
-        -v "$(pwd)/..":"$(pwd)/.." \
+        -v "$(pwd)":"$(pwd)" \
         -e PUID=$(id -u) \
         -e PGID=$(id -g) \
+        -e LOG_LEVEL="WARNING" \
         --workdir="$(pwd)" \
         javister-docker-docker.bintray.io/javister/javister-docker-git:1.0 \
         $@
