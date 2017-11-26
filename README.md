@@ -24,6 +24,8 @@ docker run \
     -v "$(pwd)":"$(pwd)" \
     -e PUID=$(id -u) \
     -e PGID=$(id -g) \
+    -e http_proxy="${http_proxy}" \
+    -e no_proxy="${no_proxy}" \
     --workdir="$(pwd)" \
     javister-docker-docker.bintray.io/javister/javister-docker-git:1.0 \
     clone https://repo.com/path
@@ -39,6 +41,8 @@ git_func() {
         -v "$(pwd)":"$(pwd)" \
         -e PUID=$(id -u) \
         -e PGID=$(id -g) \
+        -e http_proxy="${http_proxy}" \
+        -e no_proxy="${no_proxy}" \
         -e LOG_LEVEL="WARNING" \
         --workdir="$(pwd)" \
         javister-docker-docker.bintray.io/javister/javister-docker-git:1.0 \
