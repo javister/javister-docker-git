@@ -1,6 +1,7 @@
 # Docker образ с клиентом Git
 
 [ ![Download](https://api.bintray.com/packages/javister/docker/javister%3Ajavister-docker-git/images/download.svg) ](https://bintray.com/javister/docker/javister%3Ajavister-docker-git/_latestVersion)
+[![Build Status](https://travis-ci.org/javister/javister-docker-git.svg?branch=master)](https://travis-ci.org/javister/javister-docker-git)
 
 ## Введение
 
