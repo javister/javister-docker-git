@@ -26,4 +26,4 @@ sync
 GID="$(id -g)"
 
 cd ${WORK_DIR}
-docker run -v "$(pwd)/..":"$(pwd)/.." -e PUID=$(id -u) -e PGID=$(id -g) -ti --rm --workdir="$(pwd)" javister-docker-docker.bintray.io/javister/javister-docker-git:1.0 $@
+docker run -v "$(pwd)/..":"$(pwd)/.." -e PUID=$(id -u) -e PGID=$(id -g) -ti --rm --workdir="$(pwd)" javister-docker-docker.bintray.io/javister/javister-docker-git:1.1 $@
